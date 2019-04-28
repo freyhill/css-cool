@@ -1,0 +1,13 @@
+
+.text-gradient h1{
+    display: inline;
+    background: linear-gradient(to right, #FEC163, #F05F57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient a:hover{
+    background: linear-gradient(to right, #FD6585, #0D25B9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
