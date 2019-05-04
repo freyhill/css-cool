@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding:0;
+}
 html{
     font-size: 16px;
 }
@@ -7,4 +11,17 @@ body{
 a{  
     text-decoration: none;
     color:#333;
+}
+section {
+    margin-bottom:30px;
+}
+li{
+    list-style: none;
+}
+h1{
+    color:#333;
+    margin-bottom: 10px;
+}
+.flex{
+    display: flex;
 }

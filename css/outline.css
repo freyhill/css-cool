@@ -1,0 +1,11 @@
+.outline li{
+    width: 80px;
+    height: 80px;
+    background: skyblue;
+    margin-left: 20px;
+    transition: 0.3s;
+    outline: 0px solid #eee;
+}
+.outline li:hover{
+    outline: 10px solid #eee;
+}

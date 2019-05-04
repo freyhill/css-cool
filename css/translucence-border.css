@@ -1,0 +1,13 @@
+.translucence-border ul{
+    padding: 30px 0;
+    background: #360940;
+}
+.translucence-border li{
+    width: 90px;
+    height: 90px;
+    background:#fff;
+    margin-left:20px;
+    border:10px solid rgba(255, 255, 255, 0.6);
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+}
