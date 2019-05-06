@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>css cool</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/text-gradient.css">
+    <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/outline.css">
     <link rel="stylesheet" href="css/translucence-border.css">
 </head>
+
 <body>
-    <section class="text-gradient">
-        <h1>一、这是一个渐变字体</h1><br>
-        <a href="#">注意！只有行级元素支持</a>
-        <div class="img-bac-text">
-            这是一个有背景的文字
-            
-        </div><a href="https://dribbble.com/shots/6427927-Girl-05">背景图片来源</a>
-    </section>
-    <section class="outline">  
-        <h1>二、outline</h1> 
-        <p>hover below block show outline effect</p>
-        <ul class="flex">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </section>
-    <section class="translucence-border">
-        <h1>三、半透明边框</h1>
-        <ul class="flex">
-            <li class=""></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </section>
+    <article>
+        <h1>Text</h1>
+        <section class="text-gradient">
+            <h2>渐变字体</h2><br>
+            <a href="#">注意！只有行级元素支持</a>
+            <div class="img-bac-text">
+                这是一个有背景的文字
+            </div><a href="https://dribbble.com/shots/6427927-Girl-05">背景图片来源</a>
+        </section>
+        <section class="text-justify">
+            <h2>文本两边对齐</h2>
+            <p>这是一段中文文本，使用text-align:justify可以让这段文本两端对齐，但对最后一行不会有作用</p>
+        </section>
+        <section class="text-direction">
+                <h2>direction</h2>
+                <p>rtl</p>
+            </section>
+    </article>
+
+    <article>
+        <h1>block</h1>
+        <section class="outline">
+            <h2>outline</h2>
+            <p>hover below block show outline effect</p>
+            <ul class="flex">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="translucence-border">
+            <h2>半透明边框</h2>
+            <ul class="flex">
+                <li class=""></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    </article>
 </body>
+
 </html>
