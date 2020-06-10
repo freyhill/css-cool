@@ -1,0 +1,8 @@
+@import './reset.css';
+
+html,body, #root{
+    height: 100%;
+}
+.flex{
+    display: flex;
+}
