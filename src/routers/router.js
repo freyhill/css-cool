@@ -1,8 +1,11 @@
 
-import Main from '../pages/Main';
-import Font from '../pages/css/Font';
-import Flex from '../pages/css/Flex';
-import Css from '../pages/css/Index'
+import React, { Suspense, lazy } from 'react';
+// import Font from '../pages/css/Font';
+// import Flex from '../pages/css/Flex';
+// import Css from '../pages/css/Index'
+const Main = lazy(() => import('../pages/Main'));
+const Font = lazy(() => import('../pages/css/Font'));
+const Flex = lazy(() => import('../pages/css/Flex'));
 
 const routes = [
     {

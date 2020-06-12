@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { renderRoutes } from "react-router-config";
+
 class Main extends Component {
     render() {
         console.log(this.props.route.routes);
