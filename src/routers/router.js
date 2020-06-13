@@ -1,5 +1,5 @@
 
-import React, { Suspense, lazy } from 'react';
+import React, {lazy } from 'react';
 // import Font from '../pages/css/Font';
 // import Flex from '../pages/css/Flex';
 // import Css from '../pages/css/Index'
