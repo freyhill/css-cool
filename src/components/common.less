@@ -1,0 +1,26 @@
+.logo{
+    width: 100%;
+    width: 200px;
+    position: relative;
+    &::before{
+        content: "";
+        width: 1px;
+        height: 30px;
+        background: #eee;
+        position: absolute;
+        right: 0;
+    }
+    h1{ 
+       
+        font-size: 30px;
+        background: linear-gradient(to right, #FEC163, #F05F57);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+    h1:hover{
+        background: linear-gradient(to right, #FD6585, #0D25B9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
