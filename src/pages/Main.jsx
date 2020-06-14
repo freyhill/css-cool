@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { Layout } from 'antd';
 import Logo from '../components/Logo';
 import Nav from '../components/Nav';
-import {navData} from '../constant/systemData';
+import MenuComponent from '../components/Menu';
+import {navData, menuData} from '../constant/systemData';
 import {changeNavAction} from '../store/actions/systemActions';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -13,6 +14,7 @@ class Main extends Component {
     componentDidMount() {
         console.log(this.props.location.pathname);
         const path = this.props.location.pathname.split('/').filter(item=>item)
+        console.log('path', path);
         this.props.changeNavAction(path[0]);
 
     }
@@ -24,7 +26,7 @@ class Main extends Component {
         this.props.changeNavAction(link);
     }
     render() {
-        console.log(this.props.route.routes);
+        const currentMenu = this.props.currentNav ? menuData[this.props.currentNav] : menuData['less'];
         return (
             <Layout>
                 <Header className="flex">
@@ -36,10 +38,15 @@ class Main extends Component {
                         ></Nav>
                 </Header>
                 <Layout>
-                    <Sider>Sider</Sider>
+                    <Sider>
+                        <MenuComponent
+                            data={currentMenu}
+                        >
+                        </MenuComponent>
+                    </Sider>
                     <Content>{renderRoutes(this.props.route.routes)}</Content>
                 </Layout>
-                <Footer>Footer</Footer>
+                
             </Layout>
         );
     }
