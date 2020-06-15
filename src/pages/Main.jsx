@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense} from 'react';
 import { renderRoutes } from "react-router-config";
 import { connect } from 'react-redux';
 import { Layout } from 'antd';
@@ -7,7 +7,7 @@ import Nav from '../components/Nav';
 import MenuComponent from '../components/Menu';
 import {navData, menuData} from '../constant/systemData';
 import {changeNavAction} from '../store/actions/systemActions';
-
+import {Spin} from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 
 class Main extends Component {
@@ -29,7 +29,7 @@ class Main extends Component {
         const currentMenu = this.props.currentNav ? menuData[this.props.currentNav] : menuData['less'];
         return (
             <Layout>
-                <Header className="flex">
+                <Header className="flex" id="header">
                     <Logo></Logo>
                     <Nav 
                         data={navData}
@@ -44,7 +44,9 @@ class Main extends Component {
                         >
                         </MenuComponent>
                     </Sider>
-                    <Content>{renderRoutes(this.props.route.routes)}</Content>
+                    <Content>
+                        {renderRoutes(this.props.route.routes)}
+                    </Content>
                 </Layout>
                 
             </Layout>

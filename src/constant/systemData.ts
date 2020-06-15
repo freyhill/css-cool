@@ -20,6 +20,12 @@ export const navData = [
 export const menuData = {
     less: [
         {
+            name: '概览',
+            key: 'overview',
+            link: '/less',
+            icon: 'ChromeOutlined'
+        },
+        {
             name: '变量',
             key: 'variables',
             link: '/less/variables',

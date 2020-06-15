@@ -9,7 +9,7 @@ class MenuComponent extends Component {
         console.log('this.props', this.props);
         let menu = data.map(item => {
             return (
-                <Menu.Item>
+                <Menu.Item key={item.link}>
                     <Link to={item.link}>
                     {
                         React.createElement(

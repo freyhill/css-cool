@@ -4,16 +4,18 @@ import { renderRoutes } from "react-router-config";
 import routers from './routers/router';
 import {Provider} from 'react-redux';
 import store from './store/index';
-import { HashRouter } from 'react-router-dom';
-
+import { HashRouter,BrowserRouter } from 'react-router-dom';
+import {Spin} from 'antd';
 import './styles/index.less'
 ReactDOM.render(
-  <Suspense fallback={<div>Loading...</div>}>
+  
       <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter>
+          <Suspense fallback={<div className="loading flex center"><Spin></Spin></div>}>
           {renderRoutes(routers)}
-        </HashRouter>
+          </Suspense>
+        </BrowserRouter>
       </Provider>
-    </Suspense>,
+    ,
   document.getElementById('root')
 );
