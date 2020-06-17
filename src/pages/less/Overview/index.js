@@ -14,13 +14,30 @@ class LessOverview extends Component {
     renderDom = (item) => {
         React.createElement(item)
     }
+    renderVariables = () => {
+        return (
+            <div className="variables center">
+                look at me 
+            </div>)
+    }
+    renderMixins = () => {
+        return (
+            <div className='flex'>
+                <div className='mixins1'>mixins</div>
+                <div className='mixins2'>mixins</div>
+            </div>
+        )
+    }
     render() {
      
         return (
             
             <div className="less-overview flex">
                 <ArticleRender 
-                    data={docs}/>
+                    data={docs}
+                    renderVariables={this.renderVariables}
+                    renderMixins={this.renderMixins}
+                    />
                 <AnchorRender
                     data={docs}/>
             </div>

@@ -10,7 +10,7 @@ class DocRender extends Component {
         const {data = []}  = this.props;
         console.log('data', data);
         const list = data.map(item => {
-            return <section key={item.title ? item.title : item.desc}>
+            return <section className='article-section' key={item.title ? item.title : item.desc}>
                         <a name={item.title}></a>
                         <h1>{item.title}</h1>
                         

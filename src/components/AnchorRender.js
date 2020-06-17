@@ -5,11 +5,11 @@ class AnchorRender extends Component {
     }
     anchorRender = () => {
         const {data = []}  = this.props;
-        const list = data.map(item => {
+        const list = data.filter(item => item.title).map(item => {
             return (
-                <div key={item.title ? item.title :item.desc }>
+                <li key={item.title ? item.title :item.desc }>
                     <a href={`#${item.title}`}>{item.title}</a>
-                </div>
+                </li>
             )
         });
         return list
@@ -17,9 +17,9 @@ class AnchorRender extends Component {
     render() {
         return (
             <div className="anchor">
-                <div style={{position: 'absolute'}} >
+                <ul style={{position: 'absolute'}} >
                     {this.anchorRender()}
-                </div>
+                </ul>
             </div>
         );
     }
