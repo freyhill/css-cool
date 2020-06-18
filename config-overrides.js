@@ -1,5 +1,5 @@
- const { override, fixBabelImports,addLessLoader } = require('customize-cra');
- 
+ const { override, fixBabelImports,addLessLoader,addWebpackAlias } = require('customize-cra');
+ const path = require("path");
  module.exports = override(
    fixBabelImports('import', {
      libraryName: 'antd',
@@ -15,4 +15,12 @@
         },
     },
   }),
+  addWebpackAlias({
+    ['@']: path.resolve(__dirname, 'src'),
+    ['@actions']: path.resolve(__dirname, 'src/store/actions'),
+    ['@components']: path.resolve(__dirname, 'src/components'),
+    ['@pages']: path.resolve(__dirname, 'src/pages'),
+    ['@constant']: path.resolve(__dirname, 'src/constant'),
+    ['@utils']: path.resolve(__dirname, 'src/utils'),
+  })
  );

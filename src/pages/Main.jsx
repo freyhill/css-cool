@@ -6,7 +6,7 @@ import Logo from '../components/Logo';
 import Nav from '../components/Nav';
 import MenuComponent from '../components/Menu';
 import {navData, menuData} from '../constant/systemData';
-import {changeNavAction} from '../store/actions/systemActions';
+import {changeNavAction} from '@actions/systemActions';
 import {Spin} from 'antd';
 const { Header, Footer, Sider, Content } = Layout;
 

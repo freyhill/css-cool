@@ -4,8 +4,8 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco, a11yDark,vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import * as code from './doc'
 import {docs} from './doc'
-import ArticleRender from '../../../components/ArticleRender'
-import AnchorRender from '../../../components/AnchorRender'
+import ArticleRender from '@components/ArticleRender'
+import AnchorRender from '@components/AnchorRender'
 import './index.less'
 class LessOverview extends Component {
     constructor(props) {
