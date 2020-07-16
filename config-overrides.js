@@ -13,7 +13,7 @@
           '@primary-color': '#1890ff',
           '@link-color': '#1890ff'
         },
-    },
+    }
   }),
   addWebpackAlias({
     ['@']: path.resolve(__dirname, 'src'),

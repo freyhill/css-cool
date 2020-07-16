@@ -8,6 +8,9 @@ const Flex = lazy(() => import('@pages/css/Flex'));
 const LessVariables = lazy(() => import('@pages/less/Variables/index'))
 const LessIndex = lazy(() => import('@pages/less/Overview/index'))
 
+const AntdSection = lazy(() => import('@pages/antd/Main'))
+const AntdAlterStyle = lazy(() => import('@pages/antd/AlterStyle'))
+const AntdAlterTheme = lazy(() => import('@pages/antd/AlterTheme')) 
 const routes = [
     {
       path: '/',
@@ -27,6 +30,27 @@ const routes = [
           path: '/css/font',
           component: Font,
           exact: true,
+        },
+        {
+          path: '/antd',
+          component: AntdSection,
+          routes: [
+            {
+              path: '/antd',
+              exact: true,
+              component: AntdAlterStyle
+            },
+            {
+              path: '/antd/alter-style',
+              exact: true,
+              component: AntdAlterStyle
+            },
+            {
+              path: '/antd/alter-theme',
+              exact: true,
+              component: AntdAlterTheme
+            }
+          ]
         },
         {
           path:'/less',

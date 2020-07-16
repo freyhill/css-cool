@@ -11,13 +11,28 @@ export const navData = [
         link: '/less'
     },
     {
-        title: 'Sass',
-        key: 'sass',
-        link: '/sass'
+        title: 'Antd',
+        key: 'antd',
+        link: '/antd'
     }
 ]
 
 export const menuData = {
+    antd: [
+        {
+            name: '样式覆盖',
+            key: 'overview',
+            link: '/antd/alter-style',
+            icon: 'ChromeOutlined'
+        },
+        {
+            name: '更改主题',
+            key: 'overview',
+            link: '/antd/alter-theme',
+            icon: 'ChromeOutlined'
+        },
+    ],
+
     less: [
         {
             name: '概览',
